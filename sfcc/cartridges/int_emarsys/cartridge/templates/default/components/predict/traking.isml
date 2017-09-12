@@ -6,6 +6,7 @@
     </script>
 
     <iscomment>Information used to identify customer</iscomment>
+    <iscomment>
     <isif condition="${customer.authenticated && customer.registered}">
         <isif condition="${!empty(customer.profile.email)}">
             <script type="text/javascript">
@@ -17,6 +18,7 @@
             </script>
         </isif>
     </isif>
+    </iscomment>
 
     <iscomment>Cart information availabe on page load</iscomment>
     <isinclude template="components/predict/cartinfo" />

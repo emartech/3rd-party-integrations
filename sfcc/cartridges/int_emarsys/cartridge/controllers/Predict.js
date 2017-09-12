@@ -14,4 +14,12 @@ function getCartInfo() {
     }).render('components/predict/cartinfo');
 }
 
+function getCustomerInfo() {
+    app.getView({
+        PageContext: request.httpParameterMap.PageContext,
+        GuestEmail: request.httpParameterMap.GuestEmail
+    }).render('components/predict/customerinfo');
+}
+
 exports.GetCartInfo = guard.ensure(['get'], getCartInfo);
+exports.GetCustomerInfo = guard.ensure(['get'], getCustomerInfo);
